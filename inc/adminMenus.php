@@ -9,7 +9,7 @@
 
     function wpSearchFunHandler(){
         global $wpdb;
-        $table_name = $wpdb->prefix . 'rozesaSearchedUser';
+        $table_name = $wpdb->prefix . 'rozesa_search_tracker';
         /*
         *LIMIT RESULT PAGINATION 
         */

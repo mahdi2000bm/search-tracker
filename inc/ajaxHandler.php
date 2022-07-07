@@ -11,7 +11,7 @@
           $user = wp_get_current_user();
           $current_user =  $user->ID;
 
-          $table_name = $wpdb->prefix .'rozesaSearchedUser';
+          $table_name = $wpdb->prefix .'rozesa_search_tracker';
           $searched_text = $_POST['data'];
           $insert_sql = "INSERT INTO $table_name (userid , searched_text) VALUES ( '$current_user', '$searched_text')";
           require_once ABSPATH . 'wp-admin/includes/upgrade.php';

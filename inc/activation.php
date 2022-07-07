@@ -7,7 +7,7 @@
         global $wpdb;
         global $Rozesa_searchedeUser;
         
-        $table_name = $wpdb->prefix . 'rozesaSearchedUser';
+        $table_name = $wpdb->prefix . 'rozesa_search_tracker';
 
             $sql = "CREATE TABLE $table_name (
                 id int NOT NULL AUTO_INCREMENT,
