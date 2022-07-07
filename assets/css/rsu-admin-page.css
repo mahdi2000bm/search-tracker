@@ -1,0 +1,137 @@
+@font-face {
+    font-display: swap;
+	font-family: iransansx-fa;
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/woff2/fa-normal.woff2") format("woff2");
+}
+#wpcontent{
+    padding-left: 20px !important;
+}
+*.rsu-admin-page {
+    font-family: 'iransansx-fa' !important;
+}
+.rsu-admin-page img{
+    max-width: 200px;
+}
+h1.rsu-admin-page , .rsu-icon-title  img{
+    display: inline-block;
+    width: max-content;
+    font-size: 20px;
+}
+.rsu-admin-page .rsu-icon-title img {
+    width: 26px;
+    position: relative;
+    top: 6px;
+    padding-left: 4px;
+}
+.rsu-admin-page .rsu-title, .rsu-table {
+    background: #fff;
+    padding: 8px 24px;
+    margin: 8px 0px;
+    box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 5%);
+    border-radius: 16px;
+}
+/**/
+.rsu-admin-page .row.options {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 24px;
+
+}
+.rsu-admin-page .options .form-check {
+    padding-left: 8px;
+    display: inline-block;
+}
+.rsu-admin-page .options span.filter-by {
+    font-weight: 700;
+    font-size: 14px;
+    color: #1e1e1e;
+}
+.rsu-admin-page .options .form-check-input:checked {
+    background-color: #007935;
+    border-color: #007935;
+}
+.rsu-admin-page .options input[type=radio]:checked::before {
+    background: #ffffff;
+}
+.rsu-admin-page .options .form-check-input:focus {
+    border-color: #86b7fe !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%) !important;
+}
+.rsu-admin-page .options label.form-check-label {
+    color: #1e1e1e;
+}
+.rsu-admin-page .options #btnExport {
+    border: 0;
+    background: #007935;
+    color: #fff;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    outline: 0;
+    cursor: pointer;
+}
+/**/
+.rsu-admin-page .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #1e1e1e;
+    vertical-align: top;
+    border-color: #ddd;
+}
+.rsu-admin-page .table tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0 ;
+    text-align: right;
+}
+.rsu-admin-page tr:nth-last-child(1) td {
+    border: 0;
+}
+.rsu-admin-page th , td {
+    max-width: 0px;
+    overflow: hidden;
+}
+.rsu-admin-page .table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #7d7d7d;
+    text-align: right;
+}
+.rsu-admin-page .table>:not(caption)>*>* {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.rsu-admin-page td.search-time {
+    direction: ltr !important;
+}
+.rsu-admin-page .rozesa-filters-pagination {
+    width: max-content;
+    margin: auto;
+    padding: 24px 0;
+}
+.rsu-admin-page .rozesa-filters-pagination__item {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.rsu-admin-page .rozesa-filters-pagination__link {
+    padding: 8px;
+    min-width: 10px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.rsu-admin-page .rozesa-filters-pagination__item a:hover {
+    color: #fff !important;
+}
+.rsu-admin-page .rozesa-filters-pagination__item {
+    display: inline-block;
+    background: #007935;
+    box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+    color: #fff;
+    border-radius: 4px;
+}
