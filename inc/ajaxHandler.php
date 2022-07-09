@@ -5,9 +5,7 @@
      add_action('wp_ajax_nopriv_searchFormText', 'wp_handler' );
 
      function wp_handler(){
-
           global $wpdb;
-
           $user = wp_get_current_user();
           $current_user =  $user->ID;
 
@@ -17,3 +15,21 @@
           require_once ABSPATH . 'wp-admin/includes/upgrade.php';
           dbDelta($insert_sql);  
           } 
+
+          add_action('wp_ajax_get_last_products', 'getLastProducts' ); 
+          add_action('wp_ajax_nopriv_get_last_products', 'getLastProducts' );
+
+          function getLastProducts(){
+      
+              global $wpdb;
+              $postTable = $wpdb->prefix .'posts';
+      
+              $lastProducts = $wpdb->get_results("SELECT post_title , id FROM $postTable WHERE post_type = 'product' AND  post_status = 'publish' LIMIT 3");
+      
+              foreach ($lastProducts as $lastProduct){
+                      $image = wp_get_attachment_image_src( get_post_thumbnail_id( $lastProduct->id ), 'single-post-thumbnail' );
+                      $permalink = get_permalink( $lastProduct->id );
+                      echo $image[0] . "|-|";
+                      echo $lastProduct->post_title . "|-|" . "$permalink" . "||";
+              }
+          }  
