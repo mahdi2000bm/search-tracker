@@ -1,4 +1,4 @@
-let jq = jQuery
+let jq = jQuery.noConflict();
 let search_form_input = document.getElementsByClassName('elementor-search-form__input')[0]
     search_form_input.setAttribute("autocomplete", "off")
 let search_form_contain = document.getElementsByClassName('elementor-search-form__container')[0]
@@ -32,7 +32,7 @@ let boxsearch = document.getElementsByClassName('box-search')[0]
         },
         dataType: "json",
         success: function (response) {
-            console.log(response)
+            //console.log(response)
         },
         error: function(response) {
             setLastProducts(response)
@@ -49,10 +49,6 @@ let boxsearch = document.getElementsByClassName('box-search')[0]
 
             lastProductsOBJ.forEach((response) => {
                 let lastProductSplit = response.split("|-|")
-                console.log(lastProductSplit[0])
-                console.log(lastProductSplit[1])
-                console.log(lastProductSplit[2])
-                
                 jq(lastproduct_row).append(`<a href=${lastProductSplit[3]}" class="item-flex"><div class="productimg"><img src="${lastProductSplit[0]}" alt=""></div><p>${lastProductSplit[2]}</p></a>`)
             });
         }
