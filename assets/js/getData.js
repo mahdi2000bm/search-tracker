@@ -30,12 +30,11 @@ let boxsearch = document.getElementsByClassName('box-search')[0]
         data: {
             action: 'get_last_products'
         },
-        dataType: "json",
         success: function (response) {
-            //console.log(response)
+            console.log(response)
         },
         error: function(response) {
-            setLastProducts(response)
+            // setLastProducts(response)
         }
     });
 

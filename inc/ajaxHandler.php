@@ -22,6 +22,8 @@
           function getLastProducts(){
       
               global $wpdb;
+              $productsResult = [];
+
               $postTable = $wpdb->prefix .'posts';
       
               $lastProducts = $wpdb->get_results("SELECT post_title , id FROM $postTable WHERE post_type = 'product' AND  post_status = 'publish' LIMIT 3");
@@ -32,4 +34,12 @@
                       echo $image[0] . "|-|";
                       echo $lastProduct->post_title . "|-|" . "$permalink" . "||";
               }
+              array_push( $productsResult, [
+                "id"=>$lastProduct->id,
+                "title"=>"$lastProduct->post_title" ,
+                "link"=>$permalink,
+                "imagelink"=>$image[0]
+            ]);
+              $jsondata = json_encode($productsResult , JSON_UNESCAPED_UNICODE);
+              echo $jsondata;
           }  
